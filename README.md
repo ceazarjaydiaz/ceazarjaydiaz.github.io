@@ -48,7 +48,7 @@ A modern, professional portfolio website showcasing my expertise as a Full Stack
 
 ## 🏆 Featured Projects
 
-### 1. National Coordination Center Contact Center
+### 1. Enterprise Contact Center Workflow
 **Technologies:** AWS Connect, Lambda, DynamoDB
 - Architected and deployed cloud-based contact center solution
 - Improved call handling capacity by 40%
