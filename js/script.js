@@ -4,6 +4,10 @@
     const nav = document.querySelector('[data-nav]');
     const dialog = document.querySelector('[data-lightbox-dialog]');
     const dialogImage = document.querySelector('[data-lightbox-image]');
+    const dialogTitle = dialog.querySelector('[data-lightbox-title]');
+    const dialogDescription = dialog.querySelector('[data-lightbox-description]');
+    const dialogFocus = dialog.querySelector('[data-lightbox-focus]');
+    const dialogPlatform = dialog.querySelector('[data-lightbox-platform]');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     document.querySelector('[data-year]').textContent = new Date().getFullYear();
@@ -42,6 +46,11 @@
     document.querySelectorAll('[data-lightbox]').forEach((button) => {
         button.addEventListener('click', () => {
             dialogImage.src = button.dataset.lightbox;
+            dialogImage.alt = button.dataset.lightboxAlt || 'Expanded project evidence';
+            dialogTitle.textContent = button.dataset.lightboxTitle;
+            dialogDescription.textContent = button.dataset.lightboxDescription;
+            dialogFocus.textContent = button.dataset.lightboxFocus;
+            dialogPlatform.textContent = button.dataset.lightboxPlatform;
             dialog.showModal();
         });
     });
