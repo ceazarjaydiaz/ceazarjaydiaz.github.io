@@ -1,6 +1,6 @@
 # Ceazar Jay Diaz — Portfolio
 
-A static portfolio for selected full-stack, AWS, and conversational AI work.
+A static portfolio for full-stack, AWS, and conversational AI projects.
 
 ## Projects
 
