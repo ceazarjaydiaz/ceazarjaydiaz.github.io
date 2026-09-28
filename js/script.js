@@ -40,12 +40,45 @@ if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 document.querySelectorAll('[data-project]').forEach((button) => {
     button.addEventListener('click', () => {
+        const populateList = (selector, values) => {
+            const list = dialog.querySelector(selector);
+            list.replaceChildren(...values.split('|').map((value) => {
+                const item = document.createElement('li');
+                item.textContent = value;
+                return item;
+            }));
+        };
+
+        const diagram = dialog.querySelector('[data-dialog-diagram]');
+        const layers = button.dataset.diagram.split('|').map((layer) => {
+            const [title, items] = layer.split('::');
+            const group = document.createElement('section');
+            const label = document.createElement('h3');
+            const nodes = document.createElement('div');
+            label.textContent = title;
+            nodes.className = 'diagram-nodes';
+            items.split(',').forEach((name) => {
+                const node = document.createElement('span');
+                node.textContent = name;
+                nodes.append(node);
+            });
+            group.className = 'diagram-layer';
+            group.append(label, nodes);
+            return group;
+        });
+
         dialog.dataset.variant = button.dataset.project;
         dialog.querySelector('[data-dialog-title]').textContent = button.dataset.title;
-        dialog.querySelector('[data-dialog-visual]').textContent = button.dataset.title;
+        diagram.replaceChildren(...layers);
+        diagram.setAttribute('aria-label', `Generalized architecture diagram for ${button.dataset.title}`);
         dialog.querySelector('[data-dialog-description]').textContent = button.dataset.description;
+        dialog.querySelector('[data-dialog-type]').textContent = button.dataset.type;
         dialog.querySelector('[data-dialog-outcome]').textContent = button.dataset.outcome;
         dialog.querySelector('[data-dialog-stack]').textContent = button.dataset.stack;
+        dialog.querySelector('[data-dialog-discuss]').textContent = button.dataset.discuss;
+        dialog.querySelector('[data-dialog-boundary]').textContent = button.dataset.boundary;
+        populateList('[data-dialog-steps]', button.dataset.steps);
+        populateList('[data-dialog-proof]', button.dataset.proof);
         dialog.showModal();
     });
 });

@@ -44,10 +44,10 @@
         </section>
 
         <section class="work section" id="work" aria-labelledby="work-title">
-            <div class="section-heading reveal"><p class="eyebrow">01 / Selected work</p><div><h2 id="work-title">AI products built around real workflows.</h2><p>Click a project to explore the finished product and the engineering behind it.</p></div></div>
+            <div class="section-heading reveal"><p class="eyebrow">01 / Selected work</p><div><h2 id="work-title">AI products built around real workflows.</h2><p>Click a project for an NDA-safe technical case study: system type, architecture, delivered capabilities, and proof of engineering depth.</p></div></div>
             <div class="project-grid">
                 <article class="project-card reveal">
-                    <button class="project-launch" type="button" data-project="resume" data-title="CV Intelligence Platform" data-description="A multi-agent recruitment system that turns raw CVs and job descriptions into structured, explainable recommendations." data-outcome="Automates skill extraction, job classification, semantic matching, and recruiter-ready summaries in one traceable workflow." data-stack="LangChain · Gemini · OpenAI GPT · Python · Webhooks">
+                    <button class="project-launch" type="button" data-project="resume" data-title="CV Intelligence Platform" data-type="Multi-agent decision-support product" data-description="A multi-agent recruitment system that turns raw CVs and job descriptions into structured, explainable recommendations." data-outcome="Automates skill extraction, job classification, semantic matching, and recruiter-ready summaries in one traceable workflow." data-diagram="INPUTS::CV documents,Role requirements|INGESTION::Secure upload,Document parsing|AI SERVICES::Entity extraction,Semantic matching,Recommendation engine|REVIEW::Validation,Human review|DELIVERY::Web application,Structured API" data-steps="Ingest CVs and job descriptions|Normalize text and extract entities|Run specialized classification and matching agents|Generate an explainable recommendation|Deliver structured output through APIs and webhooks" data-proof="End-to-end agent orchestration|Structured skill and role-fit outputs|Reasoning designed for human review|Event-driven ingestion and delivery" data-stack="LangChain · Gemini · OpenAI GPT · Python · Webhooks" data-discuss="We can discuss the component responsibilities, information flow, human-review pattern, reliability approach, and general technology choices." data-boundary="This is a generalized reference architecture—not the client's production topology. Client identity, data, scoring logic, prompts, model configuration, integrations, security controls, and performance figures remain protected by NDA.">
                         <span class="project-id">AI PRODUCT / 01</span>
                         <span class="product-ui ui-resume" aria-hidden="true">
                             <span class="ui-top"><b>CV//MATCH</b><i>LIVE</i></span>
@@ -59,7 +59,7 @@
                 </article>
 
                 <article class="project-card reveal">
-                    <button class="project-launch" type="button" data-project="agents" data-title="Agentic Workflow Orchestrator" data-description="A modular orchestration layer for multi-step reasoning, tool use, and automated task execution." data-outcome="Coordinates ingestion, processing, and output agents while preserving structured reasoning and traceable execution paths." data-stack="Multi-Agent Architecture · LLM APIs · Event-Driven Services · Node.js">
+                    <button class="project-launch" type="button" data-project="agents" data-title="Agentic Workflow Orchestrator" data-type="Agentic orchestration platform" data-description="A modular orchestration layer for multi-step reasoning, tool use, and automated task execution." data-outcome="Coordinates ingestion, planning, specialized agents, tools, validation, and output generation while preserving a traceable execution path." data-diagram="ENTRY::Web application,External API|CONTROL::API gateway,Access policy|ORCHESTRATION::Planner,Router,Shared state|EXECUTION::Specialist agents,Approved tools,Model services|ASSURANCE::Validator,Audit trace,Result API" data-steps="Receive the task and permitted context|Planner decomposes the goal into bounded steps|Router assigns work to specialized agents|Agents call approved tools and backend services|Validator checks completeness and failure conditions|Return the result with an execution trace" data-proof="Explicit agent roles and tool boundaries|State passed safely between execution steps|Retry, validation, and failure paths|Traceable decisions and generated outputs|API-ready output for downstream products" data-stack="Multi-Agent Architecture · LLM APIs · Event-Driven Services · Node.js" data-discuss="We can discuss the orchestration pattern, bounded agent responsibilities, state flow, tool governance, validation strategy, failure handling, and general stack choices." data-boundary="This is a generalized reference architecture—not the client's production topology. Client identity, agent definitions, system prompts, integrations, proprietary rules, datasets, security controls, and performance figures remain protected by NDA.">
                         <span class="project-id">AI INFRASTRUCTURE / 02</span>
                         <span class="product-ui ui-agents" aria-hidden="true">
                             <span class="ui-top"><b>ORCHESTRATOR</b><i>06 AGENTS</i></span>
@@ -71,7 +71,7 @@
                 </article>
 
                 <article class="project-card reveal">
-                    <button class="project-launch" type="button" data-project="contact" data-title="AI Contact Center Automation" data-description="A conversational system for automated patient engagement across voice, chat, and contact-center workflows." data-outcome="Combines intent recognition, entity extraction, real-time response handling, and structured agent handoff with compliance-ready data practices." data-stack="AWS Connect · Lex · Lambda · DynamoDB · NLP">
+                    <button class="project-launch" type="button" data-project="contact" data-title="AI Contact Center Automation" data-type="Conversational AI workflow system" data-description="A conversational system for automated engagement across voice, chat, and contact-center workflows." data-outcome="Combines intent recognition, entity extraction, real-time response handling, workflow execution, and structured human handoff with compliance-aware data practices." data-diagram="CHANNELS::Voice,Chat|ENGAGEMENT::Contact center,Conversation gateway|INTELLIGENCE::Intent detection,Entity extraction,Dialog manager|SERVICES::Workflow functions,Authorized data|OUTCOMES::Automated response,Human handoff,Monitoring" data-steps="Receive a voice or chat interaction|Detect intent and extract required entities|Validate the request against workflow rules|Invoke serverless services and data lookups|Respond, recover, or route to a human agent|Record operational events for monitoring" data-proof="Multi-turn intent and entity handling|Serverless backend fulfillment|Fallback and human-handoff paths|Real-time workflow integration|Operational visibility and deployment pipelines" data-stack="AWS Connect · Lex · Lambda · DynamoDB · NLP" data-discuss="We can discuss the channel flow, conversational design pattern, serverless fulfillment, fallback strategy, human handoff, monitoring, and general cloud architecture." data-boundary="This is a generalized reference architecture—not the client's production topology. Client identity, user data, live call flows, credentials, compliance controls, integrations, and operational metrics remain protected by NDA.">
                         <span class="project-id">CONVERSATIONAL AI / 03</span>
                         <span class="product-ui ui-contact" aria-hidden="true">
                             <span class="ui-top"><b>VOICE OPS</b><i>ONLINE</i></span>
@@ -145,15 +145,23 @@
     <dialog class="product-dialog" data-project-dialog>
         <button type="button" class="dialog-close" data-dialog-close aria-label="Close project">Close ×</button>
         <div class="dialog-shell">
-            <div class="dialog-screen" data-dialog-screen aria-hidden="true">
-                <div class="screen-bar"><span>PRODUCT//LIVE</span><i>● OPERATIONAL</i></div>
-                <div class="screen-stage"><span class="screen-label">DEPLOYED SYSTEM</span><strong data-dialog-visual></strong><div class="screen-flow"><i></i><i></i><i></i><i></i></div></div>
-                <div class="screen-footer"><span>INPUT</span><b>→</b><span>REASON</span><b>→</b><span>ACT</span><b>→</b><span>OUTPUT</span></div>
+            <div class="dialog-screen" data-dialog-screen>
+                <div class="screen-bar"><span>GENERAL ARCHITECTURE</span><i>● NDA-SAFE VIEW</i></div>
+                <div class="screen-stage">
+                    <div class="diagram-heading"><span>GENERAL REFERENCE ARCHITECTURE</span><small>Sanitized view · not the production topology</small></div>
+                    <div class="architecture-diagram" data-dialog-diagram role="img"></div>
+                </div>
+                <div class="screen-footer"><span>CONCEPTUAL COMPONENTS</span><b>•</b><span>GENERALIZED DATA FLOW</span><b>•</b><span>NO CLIENT SECRETS</span></div>
             </div>
             <div class="dialog-copy">
-                <p class="eyebrow">Finished product</p><h2 data-dialog-title></h2><p data-dialog-description></p>
+                <p class="eyebrow">NDA-safe technical case study</p><h2 data-dialog-title></h2><p data-dialog-description></p>
+                <div class="dialog-type"><span>SYSTEM TYPE</span><strong data-dialog-type></strong></div>
                 <div class="dialog-outcome"><span>WHAT IT DELIVERS</span><p data-dialog-outcome></p></div>
+                <div class="dialog-architecture"><span>HOW IT FUNCTIONS</span><ol data-dialog-steps></ol></div>
+                <div class="dialog-proof"><span>PROOF OF ENGINEERING</span><ul data-dialog-proof></ul></div>
                 <div class="dialog-stack"><span>ENGINEERING STACK</span><p data-dialog-stack></p></div>
+                <div class="dialog-discuss"><span>DISCUSSABLE AREAS</span><p data-dialog-discuss></p></div>
+                <div class="dialog-boundary"><span>NDA BOUNDARY</span><p data-dialog-boundary></p><small>Further technical discussion is available within these boundaries.</small></div>
             </div>
         </div>
     </dialog>
