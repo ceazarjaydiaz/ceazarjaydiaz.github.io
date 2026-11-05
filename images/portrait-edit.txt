@@ -1,0 +1,4 @@
+Tool: built-in image generation, background-extraction edit.
+Source: portrait embedded in the user-provided CV.
+Final prompt:
+Use case: background-extraction. Edit target: the supplied portrait photograph of Ceazar. Remove only the white background and thin outer border to create a clean genuinely transparent PNG cutout for a professional portfolio. Preserve the exact person's face, identity, hair, skin tone, facial features, expression, pose, black blazer and gray shirt. Keep original head and shoulders framing, no added body, no facial retouching or beautification, no new clothing, no text. Clean natural hair edges, retain full hair and shoulders. Transparent alpha background.
