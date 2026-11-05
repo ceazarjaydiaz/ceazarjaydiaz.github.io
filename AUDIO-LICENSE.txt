@@ -1,5 +1,5 @@
-Original Ambient Score
+Original Orbital Soundscape
 
-The soundtrack is synthesized locally by js/preferences.js: slow suspended harmonies and a sparse pentatonic melody, made from oscillators. It contains no third-party recordings or samples. The composition and synthesis code are dedicated to CC0 1.0 (public-domain dedication), so this score may be used without royalties or attribution.
+A theme-neutral, slowly evolving electronic soundscape using open fifths, drifting tones, spatial bell-like details, a subtle pulse, and synthesized reverberation. No third-party recordings or samples are used. The composition and synthesis code are dedicated to CC0 1.0 and may be used without royalties or attribution.
 
-Audio starts only after the visitor enables Sound. It pauses while the browser tab is hidden. No audio files, streaming service, microphone permission, or account is required.
+Sound is enabled by default, with a remembered explicit mute preference. Playback starts automatically when permitted, otherwise on the first interaction. It pauses in background tabs.
