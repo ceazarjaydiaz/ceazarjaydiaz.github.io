@@ -12,7 +12,7 @@
     }
     let saved;
     try { saved = localStorage.getItem('district-theme'); } catch {}
-    setTheme(saved === 'day' ? 'day' : 'night');
+    setTheme(saved === 'night' ? 'night' : 'day');
     let themeTimer;
     mode.addEventListener('click', () => {
         const change = () => {
