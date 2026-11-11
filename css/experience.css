@@ -168,3 +168,4 @@
 .destination-open .city-gesture-hint{visibility:hidden}
 .city-world:not(.ready) .city-gesture-hint{display:none}
 @media(max-width:760px){.city-gesture-hint{bottom:6px;gap:8px;font-size:.56rem}.city-gesture-hint button{padding:6px 8px;min-height:32px}}
+.brand .cjd-mark{width:58px;height:32px;flex-shrink:0;overflow:visible}.cjd-mark path{stroke-width:2.4;stroke-linecap:square;stroke-linejoin:bevel}.cjd-mark .cjd-detail{stroke:var(--infinity-a);stroke-width:1;opacity:.4}.boot-content>.cjd-mark{width:150px;height:70px;margin-bottom:25px}.cjd-mark{filter:drop-shadow(0 0 7px #8cdaee18);animation:cjd-glow 6s ease-in-out infinite}@keyframes cjd-glow{50%{filter:drop-shadow(0 0 9px #ad9df03b)}}.motion-paused .cjd-mark{animation-play-state:paused}@media(prefers-reduced-motion:reduce){.cjd-mark{animation:none}}@media(max-width:760px){.brand .cjd-mark{width:52px;height:30px}}
